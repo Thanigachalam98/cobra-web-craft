@@ -1,21 +1,20 @@
-# Use a stable JDK base image
-FROM eclipse-temurin:17-jdk-jammy
+# Start from OpenJDK 17 slim image
+FROM openjdk:17-jdk-slim
 
-# Create app directory
+# Set working directory inside the container
 WORKDIR /app
 
-# Copy Maven wrapper and make it executable
+# Copy project files
 COPY . .
-COPY mvnw mvnw
-COPY .mvn .mvn
+
+# Grant permission to mvnw
 RUN chmod +x mvnw
 
-# Copy Maven files and build app
-COPY pom.xml pom.xml
-RUN ./mvnw dependency:go-offline
-
-COPY src src
+# Package the Spring Boot app
 RUN ./mvnw clean package -DskipTests
+
+# Expose default port
+EXPOSE 8080
 
 # Run the app
 CMD ["java", "-jar", "target/*.jar"]
