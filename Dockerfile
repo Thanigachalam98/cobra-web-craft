@@ -1,20 +1,10 @@
-# Start from OpenJDK 17 slim image
-FROM openjdk:17-jdk-slim
+FROM maven:3.6.3-jdk-8-slim AS build
+COPY src /home/app/src
+COPY pom.xml /home/app
+RUN mvn -f /home/app/pom.xml clean test package
 
-# Set working directory inside the container
-WORKDIR /app
-
-# Copy project files
-COPY . .
-
-# Grant permission to mvnw
-RUN chmod +x mvnw
-
-# Package the Spring Boot app
-RUN ./mvnw clean package -DskipTests
-
-# Expose default port
-EXPOSE 8080
-
-# Run the app
-CMD ["java", "-jar", "target/*.jar"]
+# Package stage
+FROM openjdk:8-jdk-alpine
+COPY --from=build /home/app/target/*.jar app.jar
+EXPOSE 8085
+ENTRYPOINT ["java","-jar","app.jar"]
