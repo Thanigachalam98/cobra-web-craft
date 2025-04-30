@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Cobra Web Craft</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div th:replace="~{fragments/navbar :: nav}"></div>
+  
+  <!-- Hero Section -->
+  <header class="hero-section text-white d-flex align-items-center justify-content-center">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Welcome to Cobra Web Craft</h1>
+      <p class="lead">We build blazing fast, beautiful, and modern websites that elevate your business.</p>
+      <a href="/contact" th:href="@{/contact}" class="btn btn-primary btn-lg mt-4">Get in Touch</a>
+    </div>
+  </header>
+  
+  <!-- Services Teaser -->
+  <section class="section text-center">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p>Custom Website Design • Spring Boot Web Applications • E-commerce Development • SEO Optimization • Maintenance & Hosting</p>
+      <a href="/services" th:href="@{/services}" class="btn btn-outline-primary mt-3">Explore Services</a>
+    </div>
+  </section>
+  
+  <div th:replace="~{fragments/footer :: footer}"></div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

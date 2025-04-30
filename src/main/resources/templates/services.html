@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Cobra Web Craft</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div th:replace="~{fragments/navbar :: nav}"></div>
+  
+  <!-- Page Header -->
+  <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+          <h1 class="display-5 fw-bold">Our Services</h1>
+          <p class="lead">Comprehensive digital solutions tailored to your success</p>
+      </div>
+  </header>
+  
+  <!-- Services Grid -->
+  <section class="container py-5">
+      <div class="row g-4">
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-paint-brush fa-3x text-primary mb-3"></i>
+                      <h5 class="card-title">Custom Website Design</h5>
+                      <p class="card-text">Stunning, responsive designs aligned with your brand identity.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-code fa-3x text-success mb-3"></i>
+                      <h5 class="card-title">Spring Boot Web Applications</h5>
+                      <p class="card-text">Scalable and secure enterprise-grade backend solutions.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-cart-shopping fa-3x text-danger mb-3"></i>
+                      <h5 class="card-title">E-commerce Development</h5>
+                      <p class="card-text">Custom online stores with intuitive design and robust functionality.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-chart-line fa-3x text-warning mb-3"></i>
+                      <h5 class="card-title">SEO Optimization</h5>
+                      <p class="card-text">Improve your online visibility and search rankings with expert SEO strategies.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-cloud fa-3x text-info mb-3"></i>
+                      <h5 class="card-title">Maintenance & Hosting</h5>
+                      <p class="card-text">Reliable hosting and proactive maintenance to keep your site running smoothly.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Service Card -->
+          <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body text-center">
+                      <i class="fas fa-comments fa-3x text-secondary mb-3"></i>
+                      <h5 class="card-title">Real-time Chat & Support</h5>
+                      <p class="card-text">Engage customers with instant messaging solutions powered by Kafka and WebSocket.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="container py-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Do you offer ongoing support after website delivery?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          Yes! We offer maintenance packages including backups, updates, and hosting.
+        </div>
+      </div>
+    </div>
+    <!-- More items -->
+  </div>
+</section>
+  <section class="container text-center py-5">
+  <h2 class="mb-4">Flexible Pricing Plans</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card border shadow-sm p-4">
+        <h4>Starter</h4>
+        <p class="fs-2 fw-bold">$499</p>
+        <ul class="list-unstyled">
+          <li>Single Page</li>
+          <li>Basic SEO</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="/contact" class="btn btn-outline-primary">Start Now</a>
+      </div>
+    </div>
+    <!-- Add Pro / Enterprise -->
+  </div>
+</section>
+  
+  
+  <div th:replace="~{fragments/footer :: footer}"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

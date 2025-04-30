@@ -1,0 +1,44 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+}
+
+/* Navbar & Footer handled by Bootstrap; additional overrides if needed */
+
+/* Hero Section (used in home.html) */
+.hero-section {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/hero.jpg') center/cover no-repeat;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* Section Padding */
+.section {
+    padding: 60px 0;
+}
+
+/* Card Shadow for Services */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* About Page Image */
+.about img, .team-member img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Footer Overrides */
+footer p {
+    margin: 0;
+}
