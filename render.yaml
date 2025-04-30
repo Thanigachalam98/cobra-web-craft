@@ -2,7 +2,7 @@ services:
   - name: cobra-web-craft
     type: web
     runtime: docker
-    repo: https://github.com/yourusername/your-repo-name
+    repo: https://github.com/Thanigachalam98/cobra-web-craft
     region: oregon
     plan: free
     dockerContext: .
