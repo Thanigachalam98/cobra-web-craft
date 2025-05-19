@@ -7,4 +7,8 @@ services:
     plan: free
     region: oregon
     branch: main
+<<<<<<< HEAD
     repo: https://github.com/Thanigachalam98/cobra-web-craft
+=======
+    repo: https://github.com/Thanigachalam98/cobra-web-craft
+>>>>>>> 1cb55859b5567cf07d1caff0f0d3b4ec5a795273
