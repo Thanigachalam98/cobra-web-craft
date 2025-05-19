@@ -42,3 +42,9 @@ body {
 footer p {
     margin: 0;
 }
+
+.opacity-img{
+	object-fit:cover;
+	border-radius:12px;
+	opacity:0.86;
+}
